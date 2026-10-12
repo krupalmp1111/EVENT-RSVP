@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shabd-Utsavnu Nimantran - Event Invitation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            gap: 30px;
+            max-width: 1050px;
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .card-left {
+            background: #ffffff;
+            padding: 15px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            width: 100%;
+            max-width: 450px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .card-left img {
+            width: 100%;
+            border-radius: 12px;
+            height: auto;
+            display: block;
+        }
+        .card-right {
+            background: #ffffff;
+            padding: 35px 30px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            width: 100%;
+            max-width: 500px;
+            box-sizing: border-box;
+            text-align: left;
+        }
+        .event-badge {
+            background: #f3f4f6;
+            color: #4f46e5;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        h2 {
+            color: #1f2937;
+            margin-top: 0;
+            font-size: 24px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .invitation-text {
+            color: #4b5563;
+            font-size: 13.5px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        .invitation-text p {
+            margin: 10px 0;
+        }
+        .details-box {
+            background: #f9fafb;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 4px solid #4f46e5;
+            font-size: 13px;
+            color: #374151;
+        }
+        .details-box p {
+            margin: 6px 0;
+        }
+        .host-section {
+            font-size: 13px;
+            color: #4b5563;
+            margin: 15px 0;
+            border-top: 1px solid #e5e7eb;
+            padding-top: 12px;
+        }
+        .host-section p {
+            margin: 4px 0;
+        }
+        input {
+            width: 100%;
+            padding: 12px 15px;
+            margin: 8px 0;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 14px;
+            font-family: 'Poppins', sans-serif;
+            outline: none;
+            transition: border 0.3s;
+        }
+        input:focus {
+            border-color: #4f46e5;
+        }
+        .error-msg {
+            color: #ef4444;
+            font-size: 12px;
+            margin-top: -4px;
+            margin-bottom: 8px;
+            display: none;
+        }
+        .btn-group {
+            display: flex;
+            gap: 12px;
+            margin-top: 15px;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: opacity 0.2s;
+            font-family: 'Poppins', sans-serif;
+        }
+        button:hover {
+            opacity: 0.9;
+        }
+        button:disabled {
+            background: #9ca3af !important;
+            cursor: not-allowed;
+        }
+        .btn-yes { background: #10b981; color: white; }
+        .btn-no { background: #ef4444; color: white; }
+        .btn-submit { background: #4f46e5; color: white; margin-top: 10px; }
+        .hidden { display: none; }
+        .success-box {
+            padding: 20px 0;
+            text-align: center;
+        }
+        .success-box h3 {
+            color: #10b981;
+            margin-bottom: 5px;
+        }
+        .custom-footer {
+            margin-top: 25px;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 13px;
+            text-align: center;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Left Side: Invitation Card Image -->
+    <div class="card-left">
+        <img src="invite-card.jpeg" alt="Shabd-Utsav Nimantran">
+    </div>
+
+    <!-- Right Side: Content & RSVP Form -->
+    <div class="card-right">
+        <div class="event-badge">શબ્દ-ઉત્સવ નિમંત્રણ</div>
+        <h2>સાહિત્યિક સંધ્યા</h2>
+        
+        <div class="invitation-text">
+            <p><strong>સાદર સસ્નેહ નમસ્કાર...</strong></p>
+            <p>શબ્દ એ જ બ્રહ્મ છે અને જ્યારે આ શબ્દો પુસ્તકનું સ્વરૂપ ધારણ કરે છે, ત્યારે સાહિત્યનો એક નવો ઉત્સવ રચાય છે. આવી જ એક યાદગાર સાહિત્યિક ક્ષણના સાક્ષી બનવા માટે આપ સૌ સ્નેહીજનોને હૃદયપૂર્વક નિમંત્રણ છે.</p>
+            <p>‘શબ્દ-ઉત્સવ’ અંતર્ગત આયોજિત મારા નૂતન પુસ્તકના વિમોચન સમારોહમાં આપશ્રીની ગરિમામય ઉપસ્થિતિ પ્રેરણારૂપ બની રહેશે. આપના સ્નેહ આશિષ અને પ્રેરણાદાયી શબ્દોથી આ સાહિત્યિક સંધ્યાની શોભા વધારવા આપને ભાવભર્યું આમંત્રણ છે.</p>
+            
+            <div class="details-box">
+                <p><strong>📅 દિન વિશેષ:</strong> ૨૦ સપ્ટેમ્બર ૨૦૨૬, મંગળવાર</p>
+                <p><strong>⏰ સમય:</strong> સાંજે ૬:૦૦ કલાકે</p>
+                <p><strong>📍 સ્થળ:</strong> ફ્લેવર્સ લોન એન્ડ બેન્ક્વેટ, સનસિટી ગેટની સામે, વકીલ સાહેબ બ્રિજ પાસે, સરદાર પટેલ રિંગ રોડ, બોપલ-આંબલી, અમદાવાદ.</p>
+            </div>
+
+            <p><em>(કાર્યક્રમની વિગતવાર માહિતી આમંત્રણ પત્રિકામાં સંલગ્ન છે.)</em></p>
+            <p>સાહિત્યના રસપાન બાદ આપણી સ્નેહગોષ્ઠીને વધુ સુમધુર બનાવવા માટે કાર્યક્રમના અંતે સ્વરુચિ ભોજનનું સુંદર આયોજન કરવામાં આવ્યું છે.</p>
+        </div>
+
+        <div class="host-section">
+            <p><strong>નિમંત્રક:</strong> અશોક ગોકળદાસ પટેલ (USA) તથા બૃહદ ગોકળદાસ પરિવાર.</p>
+            <p><strong>સંપર્ક (RSVP):</strong></p>
+            <p>• અશોક ગોકળદાસ: +1 (630) 991-7443</p>
+            <p>• મનીષ પટેલ (ઝેડ કેડ પબ્લિકેશન): +91 63588 52437</p>
+        </div>
+
+        <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 20px 0;">
+
+        <p style="font-weight: 600; color: #374151; font-size: 13.5px; text-align: center;">
+            આગમનની સુચારુ વ્યવસ્થાના ભાગરૂપે, આપની સાથે પધારનારા સભ્યોની સંખ્યા અંગે અગાઉથી જાણ કરવા નમ્ર વિનંતી છે.
+        </p>
+        
+        <div id="form-section">
+            <input type="text" id="name" placeholder="તમારું પૂરું નામ (Full Name)" required>
+            <input type="text" id="phone" placeholder="તમારો ૧૦ અંકનો મોબાઈલ નંબર (Mobile Number)" maxlength="10" required oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <div id="phone-error" class="error-msg">મોબાઈલ નંબર બરાબર ૧૦ અંકનો જ હોવો જોઈએ!</div>
+            
+            <p style="margin: 15px 0 5px 0; font-weight: 600; color: #374151; text-align: center;">તમે કાર્યક્રમમાં આવી રહ્યા છો?</p>
+            <div class="btn-group">
+                <button type="button" id="btn-yes" class="btn-yes" onclick="handleRSVP('Yes')">હા, આવશુ 👍</button>
+                <button type="button" id="btn-no" class="btn-no" onclick="handleRSVP('No')">ના, નથી આવી શકાતું ❌</button>
+            </div>
+        </div>
+
+        <div id="members-section" class="hidden">
+            <p style="font-weight: 600; color: #374151; text-align: center;">તમારી સાથે કુલ કેટલા સભ્યો આવશે?</p>
+            <input type="number" id="members" value="1" min="1" max="10">
+            <button type="button" id="btn-submit" class="btn-submit" onclick="submitData()">જવાબ સબમિટ કરો</button>
+        </div>
+
+        <div id="thankyou-section" class="hidden success-box">
+            <h3>✨ ધન્યવાદ! ✨</h3>
+            <p>તમારો જવાબ સફળતાપૂર્વક રેકોર્ડ થઈ ગયો છે.</p>
+        </div>
+    </div>
+</div>
+
+<div class="custom-footer">
+    Powered by ZCAD NAXORAA PVT LTD
+</div>
+
+<script>
+    let rsvpStatus = "";
+    const scriptURL = "https://script.google.com/macros/s/AKfycbwavK_T7m9Ycf6gTk7XddIlWhCaX0fnn-spJmWDhpMo7xB-W20WHZOGSJG5TEK1C7lwJA/exec";
+
+    function handleRSVP(status) {
+        let name = document.getElementById('name').value.trim();
+        let phone = document.getElementById('phone').value.trim();
+        let phoneError = document.getElementById('phone-error');
+
+        if(!name) {
+            alert("કૃપા કરીને પહેલા તમારું નામ લખો!");
+            return;
+        }
+
+        if(phone.length !== 10) {
+            phoneError.style.display = "block";
+            return;
+        } else {
+            phoneError.style.display = "none";
+        }
+
+        rsvpStatus = status;
+
+        // Disable buttons to prevent multiple clicks
+        document.getElementById('btn-yes').disabled = true;
+        document.getElementById('btn-no').disabled = true;
+
+        if(status === 'Yes') {
+            document.getElementById('form-section').classList.add('hidden');
+            document.getElementById('members-section').classList.remove('hidden');
+        } else {
+            submitData(0);
+        }
+    }
+
+    function submitData(memberCount = null) {
+        let name = document.getElementById('name').value;
+        let phone = document.getElementById('phone').value;
+        let members = memberCount !== null ? memberCount : document.getElementById('members').value;
+
+        let submitBtn = document.getElementById('btn-submit');
+        if(submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.innerText = "સબમિટ થઈ રહ્યું છે...";
+        }
+
+        let data = {
+            name: name,
+            phone: phone,
+            status: rsvpStatus,
+            members: rsvpStatus === 'Yes' ? members : 0
+        };
+
+        fetch(scriptURL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        }).then(() => {
+            document.getElementById('form-section').classList.add('hidden');
+            document.getElementById('members-section').classList.add('hidden');
+            document.getElementById('thankyou-section').classList.remove('hidden');
+        }).catch(error => {
+            alert('Error: ' + error);
+            if(submitBtn) submitBtn.disabled = false;
+        });
+    }
+</script>
+
+</body>
+</html>
